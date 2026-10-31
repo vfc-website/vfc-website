@@ -54,7 +54,7 @@
     <div class="wrap">
       <a class="brand" href="/" aria-label="Vanguard Frontier Capital — home">
         <img src="/assets/img/vfc-mark.png" alt="" width="106" height="65">
-        <span>Vanguard<small>Frontier Capital</small></span>
+        <span>Vanguard <small>Frontier Capital</small></span>
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="/about">About</a>
@@ -62,7 +62,7 @@
         <a href="#sectors">Sectors</a>
         <a href="#criteria">What We Look For</a>
         <a href="/investors">Investor Relations</a>
-        <a class="btn btn-solid" href="#contact">Start a Conversation</a>
+        <a class="btn btn-solid" href="/enquire">Submit Your Business</a>
       </nav>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
     </div>
@@ -73,7 +73,7 @@
     <a href="#sectors">Sectors</a>
     <a href="#criteria">What We Look For</a>
     <a href="/investors">Investor Relations</a>
-    <a class="btn btn-solid" href="#contact">Start a Conversation</a>
+    <a class="btn btn-solid" href="/enquire">Submit Your Business</a>
   </div>
 
   <main id="main">
@@ -242,7 +242,7 @@
               <li>DFIs, family offices, impact investors and diaspora capital</li>
               <li><a href="/investors" style="color:var(--bronze-light)">Read our investor overview →</a></li>
             </ul>
-            <a class="btn btn-ghost" href="/investors#lp-intro">Request an LP Introduction <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="/investors#lp-intro">Request an Introduction <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -251,11 +251,19 @@
     <!-- ─── Contact ─── -->
     <section id="contact" class="section-alt" aria-labelledby="contact-title">
       <div class="wrap">
-        <span class="eyebrow reveal">Get in Touch</span>
-        <h2 class="section-title reveal" id="contact-title">Start a <em>conversation.</em></h2>
+        <span class="eyebrow reveal">General Enquiries</span>
+        <h2 class="section-title reveal" id="contact-title">Anything else? <em>Get in touch.</em></h2>
         <div class="contact-grid">
           <div class="contact-side reveal">
-            <p>Every enquiry is read by a partner, treated in strict confidence, and answered within five business days. There is no obligation and no cost to talk.</p>
+            <p>For advisers, sector experts, media and anything else. Every message is read by a partner and answered within five business days.</p>
+            <div class="direct">
+              <span>Own a business?</span>
+              <a href="/enquire">Submit Your Business →</a>
+            </div>
+            <div class="direct">
+              <span>Investor?</span>
+              <a href="/investors#lp-intro">Request an Introduction →</a>
+            </div>
             <div class="direct">
               <span>Prefer email?</span>
               <a href="mailto:vanguardfrontiercapital@gmail.com">vanguardfrontiercapital@gmail.com</a>
@@ -266,29 +274,19 @@
             </div>
           </div>
           <form class="form reveal" data-enquiry novalidate>
-            <input type="hidden" name="_subject" value="New enquiry — Vanguard Frontier Capital website">
+            <input type="hidden" name="_subject" value="General enquiry — Vanguard Frontier Capital website">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="field">
-              <fieldset>
-                <legend>I am reaching out as</legend>
-                <div class="choice">
-                  <label><input type="radio" name="Enquiry type" value="Business Owner" checked><span>Business owner</span></label>
-                  <label><input type="radio" name="Enquiry type" value="Investor / LP"><span>Investor / LP</span></label>
-                  <label><input type="radio" name="Enquiry type" value="Other"><span>Other</span></label>
-                </div>
-              </fieldset>
-            </div>
+            <input type="hidden" name="Enquiry type" value="General enquiry">
             <div class="row">
               <div class="field"><label for="c-name">Full name *</label><input id="c-name" name="Name" autocomplete="name" required></div>
               <div class="field"><label for="c-email">Email address *</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
             </div>
             <div class="field"><label for="c-org">Company or organisation</label><input id="c-org" name="Organisation" autocomplete="organization"></div>
-            <div class="field"><label for="c-msg">Tell us briefly about your situation *</label><textarea id="c-msg" name="Message" required></textarea></div>
+            <div class="field"><label for="c-msg">Your message *</label><textarea id="c-msg" name="Message" required></textarea></div>
             <div class="form-status" role="status" aria-live="polite"></div>
             <button class="btn btn-solid" type="submit">Send Enquiry <span class="arrow" aria-hidden="true">→</span></button>
-            <p class="form-note">Business owners: for a fuller picture, use our <a href="/enquire" style="color:var(--bronze-light)">confidential deal enquiry form</a>.</p>
           </form>
         </div>
       </div>
@@ -331,14 +329,5 @@
   </footer>
 
   <script src="/assets/js/site.js" defer></script>
-  <script>
-    // Pre-select the enquiry type when a visitor arrives from the owner or investor door
-    document.querySelectorAll('[data-type]').forEach(function (a) {
-      a.addEventListener('click', function () {
-        var r = document.querySelector('input[name="Enquiry type"][value="' + a.dataset.type + '"]');
-        if (r) r.checked = true;
-      });
-    });
-  </script>
 </body>
 </html>
