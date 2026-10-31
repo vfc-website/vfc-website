@@ -216,7 +216,7 @@ section { padding: 88px 0; position: relative; }
 @media (min-width: 860px) { .leader { grid-template-columns: 260px 1fr; gap: 64px; align-items: start; } }
 .portrait { position: relative; isolation: isolate; }
 .leader .portrait { max-width: 260px; }
-.portrait img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; filter: grayscale(1) contrast(1.06) brightness(.96); }
+.portrait img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; filter: grayscale(1) contrast(1.06) brightness(.96); }
 .portrait::after { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid var(--bronze); z-index: -1; }
 .leader h3 { font-size: clamp(28px, 5vw, 38px); font-weight: 600; }
 .leader .role { font-family: var(--label); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--bronze-light); margin-top: 10px; font-weight: 600; }
