@@ -53,7 +53,7 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
       })
-        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
+        .then(function (r) { return r.text().then(function (t) { var j = {}; try { j = JSON.parse(t); } catch (e) {} return { ok: r.ok, body: j }; }); })
         .then(function (res) {
           var msg = String((res.body && res.body.message) || '');
           if (/activat/i.test(msg)) {
