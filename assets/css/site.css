@@ -428,3 +428,26 @@ section { padding: 88px 0; position: relative; }
 .assure li { display: flex; gap: 12px; color: var(--text-soft); font-size: 15px; }
 .assure svg { flex: 0 0 18px; width: 18px; height: 18px; color: var(--bronze-light); margin-top: 4px; }
 @media (min-width: 1000px) { .enquiry-aside { position: sticky; top: calc(var(--nav-h) + 32px); } }
+
+/* ── About ── */
+.about-hero .wrap { display: grid; gap: 44px; }
+@media (min-width: 960px) { .about-hero .wrap { grid-template-columns: 1.35fr 1fr; gap: 72px; align-items: end; } }
+.about-hero .portrait { max-width: 320px; }
+@media (min-width: 960px) { .about-hero .portrait { max-width: 420px; } }
+.story { max-width: 760px; }
+.story p { color: var(--text-soft); font-size: 17px; }
+.story p + p { margin-top: 20px; }
+.story .drop { font-size: clamp(22px, 4vw, 28px); line-height: 1.45; color: var(--white); font-weight: 300; }
+.story strong { color: var(--white); font-weight: 500; }
+.signature { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 16px; }
+.signature b { display: block; font-weight: 500; }
+.signature span { font-family: var(--label); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--bronze-light); font-weight: 600; }
+.reasons { display: grid; gap: 0; margin-top: 44px; border-top: 1px solid var(--line); }
+.reason { display: grid; gap: 10px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 860px) { .reason { grid-template-columns: 80px 1fr 1.4fr; gap: 32px; align-items: baseline; } }
+.reason .n { font-family: var(--label); font-size: 12px; letter-spacing: .2em; color: var(--bronze); font-weight: 600; }
+.reason h3 { font-size: 21px; font-weight: 500; }
+.reason p { color: var(--text-soft); font-size: 15px; }
+.closing { text-align: center; }
+.closing .section-title { max-width: 820px; margin-left: auto; margin-right: auto; }
+.closing .hero-ctas { justify-content: center; }
